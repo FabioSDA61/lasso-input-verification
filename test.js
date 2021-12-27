@@ -1,4 +1,21 @@
-console.log('test')
+document.getElementById('calculate-button-cash').onclick = function () {
+
+    let downpayment = document.getElementById('downpayment').value
+    let weeks = document.getElementById('weeks').value
+    let householdMembers = document.getElementById('household-members-flexpay').value
+    let price = document.getElementById('price').value
+
+    let duration = (price/weeks)-downpayment;
+
+    document.getElementById('plan-duration').innerText = duration;
+    document.getElementById('plan-duration-years').innerText = duration/52;
+    document.getElementById('c02-saving-flexplay').innerText = householdMembers*61;
+    document.getElementById('cash-return-flexplay').innerText = householdMembers*350;
+    document.getElementById('total-savings-flexpay').innerText = householdMembers*350;
+
+};
+
+
 
 
 /*

@@ -1,21 +1,38 @@
 document.getElementById('calculate-button-cash').onclick = function () {
     console.log('click')
     let downpayment = document.getElementById('downpayment').value
-    let weeks = document.getElementById('weeks').value
+    let weeks = parseInt(document.getElementById('weeks').value);
     let householdMembers = document.getElementById('household-members-flexpay').value
-    let price = document.getElementById('price').value
 
-    let duration = (price/weeks)-downpayment;
-    console.log(duration)
+    let str = document.getElementById('price').innerText
+	let price = parseInt(str.slice(1, str.length - 4).replace(/,/g, ''))-downpayment;
+    console.log(price)
+    let remainingMonths = Date.parse(new Date('Mar 01, 2023')) - Date.parse(new Date());
+    let sec = Math.floor(remainingMonths / 1000),
+      min = Math.floor(sec / 60),
+      hrs = Math.floor(min / 60),
+      days = Math.floor(hrs / 24),
+      months  = Math.floor(days / 30),
+      payments = weeks*months
+      console.log(months)
+      console.log(weeks)
+      console.log(payments)
+      console.log(price)
+    let rate = (price/payments).toFixed(2);
+    console.log(rate)
 
-    document.getElementById('plan-duration').innerText = duration;
-    document.getElementById('plan-duration-years').innerText = duration/52;
+    document.getElementById('plan-duration').innerText = months;
+    document.getElementById('plan-rate').innerText = rate;
     document.getElementById('c02-saving-flexplay').innerText = householdMembers*61;
     document.getElementById('cash-return-flexplay').innerText = householdMembers*350;
-    document.getElementById('total-savings-flexpay').innerText = householdMembers*350*10;
+    document.getElementById('total-savings-flexpay').innerText = price-householdMembers*350*10;
 
 };
 console.log('test')
+
+function calculateFlexPay() {
+    console.log('click')
+};
 
 
 

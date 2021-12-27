@@ -7,7 +7,7 @@ document.getElementById('calculate-button-cash').onclick = function () {
 
     let duration = (price/weeks)-downpayment;
     console.log(duration)
-    
+
     document.getElementById('plan-duration').innerText = duration;
     document.getElementById('plan-duration-years').innerText = duration/52;
     document.getElementById('c02-saving-flexplay').innerText = householdMembers*61;
@@ -15,6 +15,7 @@ document.getElementById('calculate-button-cash').onclick = function () {
     document.getElementById('total-savings-flexpay').innerText = householdMembers*350*10;
 
 };
+console.log('test')
 
 
 

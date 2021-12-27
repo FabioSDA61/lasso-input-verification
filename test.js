@@ -11,7 +11,7 @@ document.getElementById('calculate-button-cash').onclick = function () {
     document.getElementById('plan-duration-years').innerText = duration/52;
     document.getElementById('c02-saving-flexplay').innerText = householdMembers*61;
     document.getElementById('cash-return-flexplay').innerText = householdMembers*350;
-    document.getElementById('total-savings-flexpay').innerText = householdMembers*350;
+    document.getElementById('total-savings-flexpay').innerText = householdMembers*350*10;
 
 };
 
@@ -44,6 +44,25 @@ document.getElementById('verify').onclick = function () {
 }
 */
 
+
+ /* 
+  setTimeout(function(){ 
+  	let colorChoice = document.getElementById("color-choice").innerText;
+    if (colorChoice == "White") {
+      document.querySelector(".icecap-white").click();
+    } else if (colorChoice == "Cream") {
+      document.querySelector(".beach-creme").click();
+    } else if (colorChoice == "Matte Grey") {
+      document.querySelector(".pebble-grey").click();
+    } else if (colorChoice == "Silver Metallic") {
+      document.querySelector(".silver-metallic").click();
+    } else if (colorChoice == "Canary") {
+      document.querySelector(".lasso-canary").click();
+    } else {
+      document.querySelector(".bear-black").click();
+    } 
+  }, 1000);
+*/
 
 
 

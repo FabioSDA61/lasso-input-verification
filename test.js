@@ -1,3 +1,7 @@
+
+console.log('test')
+
+
 document.getElementById('calculate-button-flexpay').onclick = function () {
     console.log('click')
     let downpayment = document.getElementById('downpayment').value
@@ -23,8 +27,6 @@ document.getElementById('calculate-button-flexpay').onclick = function () {
     document.getElementById('total-savings-flexpay').innerText = price-householdMembers*350*10;
 
 };
-console.log('test')
-
 
 
 

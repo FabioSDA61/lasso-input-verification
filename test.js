@@ -1,7 +1,9 @@
+console.log('test')
 
 
+/*
 document.getElementById('verify').onclick = function () {
-    console.log("onClick")
+    
     let email = document.getElementById('email').value
 
     axios
@@ -23,7 +25,7 @@ document.getElementById('verify').onclick = function () {
     });
 
 }
-
+*/
 
 
 

@@ -30,10 +30,6 @@ document.getElementById('calculate-button-cash').onclick = function () {
 };
 console.log('test')
 
-function calculateFlexPay() {
-    console.log('click')
-};
-
 
 
 

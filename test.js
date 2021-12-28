@@ -32,7 +32,7 @@ function calculateFlexpayMobile () {
   let downpayment = document.getElementById('downpayment-m').value
   let weeks = parseInt(document.getElementById('weeks-m').value);
   let householdMembers = document.getElementById('household-members-flexpay-m').value ? parseInt(document.getElementById('household-members-flexpay-m').value) : 3;
-  let deadline = document.getElementById('paymentplan-deadline-date-m').innerText
+  let deadline = document.getElementById('paymentplan-deadline-date').innerText
   let str = document.getElementById('total-price').innerText
   let price = parseInt(str.slice(1, str.length - 4).replace(/,/g, ''))-downpayment;
   let remainingMonths = Date.parse(new Date(deadline)) - Date.parse(new Date());

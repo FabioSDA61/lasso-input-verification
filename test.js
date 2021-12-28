@@ -4,10 +4,10 @@ document.getElementById('calculate-button-flexpay').onclick = function () {
     let downpayment = document.getElementById('downpayment').value
     let weeks = parseInt(document.getElementById('weeks').value);
     let householdMembers = document.getElementById('household-members-flexpay').value ? parseInt(document.getElementById('household-members-flexpay').value) : 3;
-
+    let deadline = document.getElementById('paymentplan-deadline-date').innerText
     let str = document.getElementById('price').innerText
-	let price = parseInt(str.slice(1, str.length - 4).replace(/,/g, ''))-downpayment;
-    let remainingMonths = Date.parse(new Date('Mar 01, 2023')) - Date.parse(new Date());
+	  let price = parseInt(str.slice(1, str.length - 4).replace(/,/g, ''))-downpayment;
+    let remainingMonths = Date.parse(new Date(deadline)) - Date.parse(new Date());
     let sec = Math.floor(remainingMonths / 1000),
       min = Math.floor(sec / 60),
       hrs = Math.floor(min / 60),

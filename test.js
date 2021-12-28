@@ -53,8 +53,8 @@ function calculateFlexpayMobile () {
 
 };
 
-document.getElementById('calculate-button-flexpay').onclick = calculateFlexpay()
-document.getElementById('calculate-button-flexpay-m').onclick = calculateFlexpayMobile()
+document.getElementById('calculate-button-flexpay').onclick = function () {calculateFlexpay()} 
+document.getElementById('calculate-button-flexpay-m').onclick = function () {calculateFlexpayMobile()} 
 
     
 function calculateCash () {
@@ -79,8 +79,8 @@ function calculateCashMobile (){
   document.getElementById('total-savings-cash-m').innerText = price-householdMembers*350*10;
 };
 
-document.getElementById('calculate-button-cash-m').onclick = calculateCashMobile();
-document.getElementById('calculate-button-cash').onclick = calculateCash();
+document.getElementById('calculate-button-cash-m').onclick = function () {calculateCashMobile();} 
+document.getElementById('calculate-button-cash').onclick = function () {calculateCash();} 
 
 
 /*

@@ -26,12 +26,10 @@ document.getElementById('calculate-button-flexpay').onclick = function () {
 
 document.getElementById('calculate-button-cash').onclick = function () {
 
-  let householdMembers = document.getElementById('household-members-cash').value ? parseInt(document.getElementById('household-members-flexpay').value) : 3;
+  let householdMembers = document.getElementById('household-members-cash').value ? parseInt(document.getElementById('household-members-cash').value) : 3;
   let str = document.getElementById('price').innerText
-  let price = parseInt(str.slice(1, str.length - 4).replace(/,/g, ''))-downpayment;
+  let price = parseInt(str.slice(1, str.length - 4).replace(/,/g, ''));
 
-  document.getElementById('plan-duration').innerText = months;
-  document.getElementById('plan-rate').innerText = rate;
   document.getElementById('c02-saving-cash').innerText = householdMembers*61;
   document.getElementById('cash-return-cash').innerText = householdMembers*350;
   document.getElementById('total-savings-cash').innerText = price-householdMembers*350*10;

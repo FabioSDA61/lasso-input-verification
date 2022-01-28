@@ -1,5 +1,5 @@
 
-
+/*
 
 function calculateFlexpay () {
 
@@ -52,9 +52,9 @@ function calculateFlexpayMobile () {
   document.getElementById('total-savings-flexpay-m').innerText = price-householdMembers*350*10;
 
 };
-
-document.getElementById('calculate-button-flexpay').onclick = function () {calculateFlexpay()} 
-document.getElementById('calculate-button-flexpay-m').onclick = function () {calculateFlexpayMobile()} 
+*/
+//document.getElementById('calculate-button-flexpay').onclick = function () {calculateFlexpay()} 
+//document.getElementById('calculate-button-flexpay-m').onclick = function () {calculateFlexpayMobile()} 
 
     
 function calculateCash () {
